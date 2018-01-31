@@ -1,0 +1,71 @@
+@import "../../../src/styles.scss";
+
+.login-page{
+  background-color: white;
+  height: 100vh;
+  width: auto;
+}
+
+.login-card {
+  width: 400px;
+  border-radius: 5px;
+}
+
+.logo-container{
+  //padding: 30px;
+  border-radius: 100%;
+  .logo-image {
+    height: auto;
+    width: 200px;
+}
+
+
+}
+
+.form{
+  height: 60%;
+  width: 85%;
+  .input-box{
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+
+    input{
+      width: 100%;
+      color: navy;
+      font-family: Roboto, "Helvetica Neue", sans-serif;
+      font-size: 16px;
+
+    }
+  }
+}
+
+.mat-raised-button{
+  color: white;
+  background-color: #e03900;
+  box-shadow: #eeeeee;
+  border-radius: 30px;
+}
+
+//.login-image{
+//  width: 500px;
+//  background-image: url("../../assets/images/sean-415024.jpg");
+//    .bold{
+//      font-weight: 600;
+//      color: white;
+//      font-family: inherit;
+//      font-size: 80px;
+//    }
+//    .medium{
+//      font-weight: 400;
+//      color: white;
+//      font-family: inherit;
+//      font-size:40px;
+//
+//  }
+//  p{
+//    font-weight: 300;
+//    font-family: inherit;
+//    font-size: 24px;
+//    color: white;
+//  }
+//}
