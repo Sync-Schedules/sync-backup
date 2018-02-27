@@ -1,84 +1,40 @@
-<div class="container">
-  <mat-sidenav-container>
-    <mat-sidenav #sidenav class="sidenav">
-      <mat-list>
-        <mat-list-item>
-          <button mat-icon-button (click)="sidenav.close()">
-            <mat-icon>clear</mat-icon>
-          </button>
-        </mat-list-item>
-        <mat-list-item>
-          <h3 matLine class="mat-subheader">
-            <a routerLink="home" (click)="sidenav.toggle()">Home</a>
-          </h3>
-        </mat-list-item>
-        <hr>
-        <mat-list-item>
-          <h3 matLine class="mat-subheader">
-            <a routerLink="sign-up/become-a-captain" (click)="sidenav.toggle()">Become a Captain</a>
-          </h3>
-        </mat-list-item>
-        <mat-list-item>
-          <h3 matLine class="mat-subheader">
-            <a routerLink="contact-anchor" (click)="sidenav.toggle()">Contact</a>
-          </h3>
-        </mat-list-item>
-        <mat-list-item>
-          <h3 matLine class="mat-subheader">
-            <a routerLink="signup" (click)="sidenav.toggle()"><span>Passenger Sign Up</span></a>
-          </h3>
-        </mat-list-item>
-        <mat-list-item>
-          <h3 matLine class="mat-subheader">
-            <a routerLink="login" (click)="sidenav.toggle()"><span>Login</span></a>
-          </h3>
-        </mat-list-item>
-      </mat-list>
-
-    </mat-sidenav>
-
-    <!--<div class="pageview">-->
-      <!--<mat-toolbar scroll color="primary">-->
-        <!--<div fxFlex fxLayoutAlign="center center">-->
-          <!--<a routerLink="home" >Prestige Worldwide</a>-->
-        <!--</div>-->
-        <!--<div><a routerLink="login">Login</a> </div>-->
-      <!--</mat-toolbar>-->
-      <main class="router">
-        <router-outlet></router-outlet>
-      </main>
+<div class="allwrap">
+  <mat-toolbar class="syncbar" color="primary">
+    <span fxLayout="row">
+      <a routerLink="home">
+        <img src="../assets/images/sync-small@0.5x.png">
+      </a>
+    </span>
+    <span class="example-spacer"></span>
+    <div class="nav-item">
+      <a routerLink="#venues">VENUES</a>
+    </div>
+    <div class="nav-item">
+      <a routerLink="about">ABOUT</a>
+    </div>
+    <div class="nav-item">
+      <a routerLink="contact">CONTACT</a>
+    </div>
+    <a routerLink="portfolio">
+      <div class="loginbutton">
+      LOGIN
+      </div>
+    </a>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+  <mat-toolbar id="footer">
+    <span fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="30px">
+      <i class="fa fa-copyright"></i>
+      Sync Scheduling, Inc.
+    </span>
+    <span class="example-spacer"></span>
+    <span fxLayoutGap="10px" class="social">
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-github"></i>
+      <i class="fa fa-instagram"></i>
+    </span>
 
 
-
-      <!--<footer #footer id="footer" class="mat-toolbar">-->
-          <!--<div fxLayout="row">-->
-            <!--<div fxFlex="50%" fxLayout="column">-->
-              <!--<div class ="copyright" fxLayout="row">-->
-                <!--<div class><mat-icon>copyright</mat-icon></div>-->
-                <!--<div><p>Copyright <span>2017</span></p></div>-->
-              <!--</div>-->
-            <!--</div>-->
-
-            <!--<span fxFlex="30%"></span>-->
-
-            <!--<div fxFlex="20%">-->
-              <!--<div class="social" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="space-evenly center">-->
-                <!--<a target="_blank" href="https://www.facebook.com/p.romerorgz">-->
-                  <!--<i class="fa fa-facebook fa-lg" aria-hidden="true"></i>-->
-                <!--</a>-->
-                <!--<a target="_blank" href="https://www.instagram.com/pabloromerorgz">-->
-                  <!--<i class="fa fa-instagram fa-lg" aria-hidden="true"></i>-->
-                <!--</a>-->
-                <!--<a target="_blank" href="https://www.linkedin.com/in/promerorgz/">-->
-                  <!--<i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>-->
-                <!--</a>-->
-                <!--<a target="_blank" href="https://github.com/promerorgz">-->
-                  <!--<i class="fa fa-github fa-lg" aria-hidden="true"></i>-->
-                <!--</a>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</footer>-->
-    <!--</div>-->
-  </mat-sidenav-container>
+  </mat-toolbar>
 </div>

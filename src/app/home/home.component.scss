@@ -1,17 +1,30 @@
 @import "../../../src/styles.scss";
 
 
-.pageview {
+.landing {
 
-  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  background-color: white;
+  height: 100vh;
 
   h1 {
-    color: white;
+    color: black;
     font-size: 100px;
     font-weight: 100;
+    font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 10px
   }
   .mat-raised-button{
-    border-radius: 30px;
-    width: 100px;
+    background-color: #0BA5DB;
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 10px;
+    width: 500px;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: 1px solid #0BA5DB;
+    padding: 16px 35px;
+    margin-top: 50px;
+    letter-spacing: 2px;
   }
 }

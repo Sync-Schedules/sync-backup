@@ -10,20 +10,11 @@ div {
   margin: 0;
   padding: 0;
 }
-a{
-  color: white;
-  text-decoration: none;
-}
 
 body{
   background-color: white;
 }
 
-a:hover, a:focus {
-  color: navy;
-  text-decoration: none;
-  outline: none;
-}
 
 [scroll] {
   position: fixed;
@@ -32,7 +23,7 @@ a:hover, a:focus {
 }
 
 .prestige-space{
-  height:25%;
+  height:10%;
 }
 
 .mat-card{
