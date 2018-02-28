@@ -69,11 +69,13 @@ body{
   }
 
 }
-
-hr{
-  background-color: gray;
-  color: gray;
-
+.mat-divider, .mat-divider-vertical {
+  border: 2px;
+  clear:both;
+  display:block;
+  width: 90%;
+  background-color:#777777;
+  height: 1px;
 }
 
 router-outlet{
@@ -87,6 +89,7 @@ router-outlet{
     flex-direction: column;
     min-height: 100vh;
 }
+
 main {
   display: flex;
   flex-direction: column;
@@ -113,3 +116,26 @@ main {
       color: #88d1cc;
     }
   }}
+
+.landing {
+
+
+  background-color: white;
+  height: 100vh;
+
+
+  .mat-raised-button{
+    background-color: #0BA5DB;
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 10px;
+    width: 500px;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: 1px solid #0BA5DB;
+    padding: 16px 35px;
+    margin-top: 50px;
+    letter-spacing: 2px;
+  }
+}

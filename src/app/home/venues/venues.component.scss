@@ -1,0 +1,23 @@
+@import "../../../../src/styles.scss";
+
+.locations {
+  background-color: aliceblue;
+  padding: 48px 0;
+  h1 {
+    color: #0BA5DB;
+    font-size: 32px;
+    font-weight: bolder;
+    font-family: 'Dosis', sans-serif;
+    margin: 10px;
+    padding-top: 30px;
+  }
+
+  .bar_logos {
+
+    mat-grid-tile {
+      background: lightblue;
+      border: 1px solid black;
+    }
+
+  }
+}

@@ -35,6 +35,8 @@ import { HomeComponent } from './home/home.component';
 import { PortalComponent } from './portal/portal.component';
 import { UserComponent } from './portal/user/user.component';
 import { AdminComponent } from './portal/admin/admin.component';
+import { VenuesComponent } from './home/venues/venues.component';
+import { AboutUsComponent } from './home/about-us/about-us.component';
 
 
 @NgModule({
@@ -45,6 +47,8 @@ import { AdminComponent } from './portal/admin/admin.component';
     PortalComponent,
     UserComponent,
     AdminComponent,
+    VenuesComponent,
+    AboutUsComponent,
 
   ],
   imports: [
