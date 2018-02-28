@@ -12,6 +12,7 @@ a {
   font-size: inherit;
   font-weight: 400;
   color: inherit;
+
 }
 
 .allwrap{
@@ -64,3 +65,17 @@ a {
   }
 
 
+.material-icons{
+  color: #0BA5DB;
+  font-family: 'Material Icons',sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size:36px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}

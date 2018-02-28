@@ -1,11 +1,24 @@
 <div class="allwrap">
   <mat-toolbar class="syncbar" color="primary">
-    <span fxLayout="row">
+    <span fxLayout="row" fxShow="true" fxHide.lt-md>
       <a routerLink="home">
         <img src="../assets/images/sync-small@0.5x.png">
       </a>
     </span>
+    <span fxLayout="row" fxShow="false" fxShow.lt-md>
+      <a routerLink="home">
+        <i class="material-icons">menu</i>
+      </a>
+    </span>
+
     <span class="example-spacer"></span>
+
+    <span fxLayout="row" fxShow="false" fxShow.lt-md>
+      <a routerLink="home">
+        <img src="../assets/images/sync-small@0.5x.png">
+      </a>
+    </span>
+    <div class="nav-menu" fxLayout="row" fxLayoutAlign="space-evenly center" fxShow="true" fxHide.lt-md>
     <div class="nav-item">
       <a routerLink="../home/venues/">VENUES</a>
     </div>
@@ -20,6 +33,7 @@
       LOGIN
       </div>
     </a>
+    </div>
   </mat-toolbar>
   <router-outlet></router-outlet>
   <mat-toolbar id="footer">
