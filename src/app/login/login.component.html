@@ -1,54 +1,34 @@
 <div class="login-page" fxLayout="column" fxLayoutAlign="center center">
-  <div class="prestige-space"> </div>
-
-<mat-card class="login-card">
-
-  <mat-card-title>
-    <!--<button mat-icon-button><mat-icon>close</mat-icon></button>-->
-    <div fxLayoutAlign="center center">
-      <span>Prestige Worldwide</span>
-    </div>
-    <div><hr></div>
-  </mat-card-title>
-
-
-    <form #loginForm="ngForm">
-      <div class="form-container" fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center">
-        <div class ="input-container" fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center">
-          <div class="username" fxLayout="row">
-            <div fxFlex>
-              <input fxFlex class="form-field" label="email" placeholder="Email">
-            </div>
-            <!--<div fxLayoutAlign="center center">-->
-              <!--<mat-icon>email</mat-icon>-->
-            <!--</div>-->
-          </div>
-          <div class="password">
-            <div fxFlex>
-              <input fxFlex class="form-field" label="password" placeholder="password">
-            </div>
-            <!--<div fxLayoutAlign="center center">-->
-              <!--<mat-icon>lock</mat-icon>-->
-            <!--</div>-->
-          </div>
-
+  <div class="prestige-space"></div>
+  <mat-card class="login-card">
+    <mat-card-title>
+      <div fxLayoutAlign="center center">
+        <img src="../../assets/images/sync-small@0.5x.png">
+      </div>
+    </mat-card-title>
+    <div class="prestige-space"></div>
+    <div  fxLayoutAlign="center center" fxLayoutGap="30px">
+      <div class="form-container" fxLayout="column" fxLayoutGap="20px">
+        <div>
+          <input class="form-field" label="email" placeholder="Email">
         </div>
-        <div fxLayout="column" fxLayoutGap="10px" >
-          <div fxLayoutAlign="center">
-            <a fxFlex.xs="95%" fxFlex="95%" fxLayoutAlign="center" href routerLink="forgot-password">Forgot Password?</a>
-          </div>
-          <div class="prestige-space"></div>
-          <div fxFlex = "95%" class="login-btn">
-            <div fxLayout="row" fxLayoutWrap fxLayoutAlign="center center">
-              <button fxFlex.xs="95%" fxFlex="95%" [disabled]="!loginForm.form.valid" mat-raised-button  (click)="login()" type="submit" >Log in</button>
-            </div>
-          </div>
-          <div><hr></div>
-          <a routerLink="../home">home</a>
+        <div>
+          <input class="form-field" label="password" placeholder="password">
         </div>
       </div>
-    </form>
-
-</mat-card>
+    </div>
+    <div class="prestige-space"></div>
+    <div fxLayoutAlign="center center">
+      <button mat-raised-button class="login">LOGIN</button>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="space-around center">
+    <div>
+      <a class="forgot-password" routerLink="reset-password">Forgot Password?</a>
+    </div>
+    <div>
+      <a class="cancel" routerLink="../home">cancel</a>
+    </div>
+    </div>
+  </mat-card>
   <div class="prestige-space"></div>
 </div>

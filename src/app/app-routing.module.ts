@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {LoginComponent} from "./login/login.component";
-import {HomeComponent} from "./home/home.component";
-import {UserComponent} from "./portal/user/user.component";
-import {AdminComponent} from "./portal/admin/admin.component";
+import {LoginComponent} from './login/login.component';
+import {HomeComponent} from './home/home.component';
+import {UserComponent} from './portal/user/user.component';
+import {AdminComponent} from './portal/admin/admin.component';
+import {VenuesComponent} from './home/venues/venues.component';
 
 const routes: Routes = [
   {
-    path:'',
+    path: '',
     redirectTo: 'home',
     pathMatch: 'full'
 
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent
+  },
+  {
+    path: 'venues',
+    component: VenuesComponent
   }
 ];
 

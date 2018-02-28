@@ -29,8 +29,8 @@ body{
 .mat-card{
   height: 500px;
   width: 1000px;
-  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-  border-radius: 10px;
+  background: white;
+  border-radius: 5px;
 
 
   .mat-card-title{
@@ -56,19 +56,8 @@ body{
 
 }
 
-.form-field{
-  border-radius: 30px;
-  font-size: 16px;
-  font-weight: 400;
-  height: 40px;
-  text-align: center;
-  mat-icon{
-    font-size: 16px;
-    font-weight: 400;
-    color: navy;
-  }
 
-}
+
 .mat-divider, .mat-divider-vertical {
   border: 2px;
   clear:both;
@@ -138,4 +127,14 @@ main {
     margin-top: 50px;
     letter-spacing: 2px;
   }
+}
+
+::placeholder {
+  color: #0BA5DB;
+  font-family:  Roboto, "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  text-transform: capitalize;
+  padding: 5px;
 }
