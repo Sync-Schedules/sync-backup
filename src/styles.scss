@@ -48,16 +48,6 @@ body{
 
 
 
-.img-circle{
-  padding: 5px;
-  height: 25%;
-  width: 25%;
-
-
-}
-
-
-
 .mat-divider, .mat-divider-vertical {
   border: 2px;
   clear:both;
@@ -107,25 +97,24 @@ main {
   }}
 
 .landing {
-
-
   background-color: white;
   height: 100vh;
 
-
-  .mat-raised-button{
-    background-color: #0BA5DB;
-    color: white;
-    font-size: 16px;
-    font-weight: 300;
-    border-radius: 10px;
+.mat-raised-button{
+  background-color: #0BA5DB;
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border: 1px solid #0BA5DB;
+  letter-spacing: 2px;
+}
+  .login-card-button{
     width: 500px;
-    text-transform: uppercase;
-    font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
-    border: 1px solid #0BA5DB;
     padding: 16px 35px;
     margin-top: 50px;
-    letter-spacing: 2px;
   }
 }
 
@@ -137,4 +126,38 @@ main {
   text-align: left;
   text-transform: capitalize;
   padding: 5px;
+}
+
+
+.form-field{
+  border-radius: 6px;
+  height: 25px;
+  text-align: left;
+  width: 95%;
+  color: #0BA5DB;
+  font-family:  Roboto, "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding: 5px;
+  mat-icon{
+    font-size: 16px;
+    font-weight: 400;
+    color: navy;
+  }
+
+}
+
+.mat-action-row, a{
+  text-decoration: none;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  .cancel{
+    color: red;
+  }
+  .forgot-password{
+    color: #0BA5DB;
+  }
+
 }

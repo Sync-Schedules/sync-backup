@@ -13,24 +13,7 @@
 .form-container{
   height: 60%;
   width: 85%;
-  .form-field{
-    border-radius: 6px;
-    height: 25px;
-    text-align: left;
-    width: 95%;
-    color: #0BA5DB;
-    font-family:  Roboto, "Helvetica Neue", sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: capitalize;
-    padding: 5px;
-    mat-icon{
-      font-size: 16px;
-      font-weight: 400;
-      color: navy;
-    }
 
-  }
 }
 .login {
   margin-top: 60px;
@@ -46,42 +29,4 @@
   }
 }
 
-.mat-action-row, a{
-  text-decoration: none;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  .cancel{
-    color: red;
-  }
-  .forgot-password{
-    color: #0BA5DB;
-  }
 
-}
-
-
-
-//.login-image{
-//  width: 500px;
-//  background-image: url("../../assets/images/sean-415024.jpg");
-//    .bold{
-//      font-weight: 600;
-//      color: white;
-//      font-family: inherit;
-//      font-size: 80px;
-//    }
-//    .medium{
-//      font-weight: 400;
-//      color: white;
-//      font-family: inherit;
-//      font-size:40px;
-//
-//  }
-//  p{
-//    font-weight: 300;
-//    font-family: inherit;
-//    font-size: 24px;
-//    color: white;
-//  }
-//}

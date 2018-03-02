@@ -37,6 +37,7 @@ import { UserComponent } from './portal/user/user.component';
 import { AdminComponent } from './portal/admin/admin.component';
 import { VenuesComponent } from './home/venues/venues.component';
 import { AboutUsComponent } from './home/about-us/about-us.component';
+import { LoginBarComponent } from './login/login-bar/login-bar.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { AboutUsComponent } from './home/about-us/about-us.component';
     AdminComponent,
     VenuesComponent,
     AboutUsComponent,
+    LoginBarComponent,
 
   ],
   imports: [
