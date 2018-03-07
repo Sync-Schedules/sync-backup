@@ -5,6 +5,7 @@ import {HomeComponent} from './home/home.component';
 import {UserComponent} from './portal/user/user.component';
 import {AdminComponent} from './portal/admin/admin.component';
 import {VenuesComponent} from './home/venues/venues.component';
+import {EmployeesComponent} from "./portal/admin/employees/employees.component";
 
 const routes: Routes = [
   {
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'venues',
     component: VenuesComponent
+  },
+  {
+    path: 'employees',
+    component: EmployeesComponent
   }
 ];
 

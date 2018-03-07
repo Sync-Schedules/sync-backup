@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var book = require('./routes/book');
 var app = express();
 
+var mongoose = require('mongoose');
 
 
 
@@ -33,7 +34,19 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+  next(err);
 });
+
+//Mongoose Config
+
+mongoose.Promise = require('bluebird');
+mongoose.connect('mongodb://localhost:27017/sync_data',
+  {
+  useMongoClient:true,
+  promiseLibrary: require('bluebird')
+  })
+  .then(() => console.log('connection successful'))
+  .catch((err) => console.error(err));
 
 module.exports = app;
 

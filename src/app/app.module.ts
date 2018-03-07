@@ -10,7 +10,7 @@ import 'rxjs/add/operator/toPromise';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import {DatePipe, CurrencyPipe} from '@angular/common';
-import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule, HttpClient} from '@angular/common/http';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {
@@ -30,7 +30,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 
-import {LoginComponent} from "./login/login.component";
+import {LoginComponent} from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { PortalComponent } from './portal/portal.component';
 import { UserComponent } from './portal/user/user.component';
@@ -38,6 +38,7 @@ import { AdminComponent } from './portal/admin/admin.component';
 import { VenuesComponent } from './home/venues/venues.component';
 import { AboutUsComponent } from './home/about-us/about-us.component';
 import { LoginBarComponent } from './login/login-bar/login-bar.component';
+import { EmployeesComponent } from './portal/admin/employees/employees.component';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import { LoginBarComponent } from './login/login-bar/login-bar.component';
     VenuesComponent,
     AboutUsComponent,
     LoginBarComponent,
+    EmployeesComponent,
 
   ],
   imports: [
