@@ -6,7 +6,7 @@
   "apps": [
     {
       "root": "src",
-      "outDir": "dist",
+      "outDir": "../sync-node/public",
       "assets": [
         "assets",
         "favicon.ico"

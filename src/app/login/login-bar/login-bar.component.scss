@@ -1,8 +1,12 @@
 @import "../../../../src/styles.scss";
 
 
+
+.example-form{
+  width: 80%;
+}
 .login-bar {
-  .form-field {
+  .mat-form-field {
     width: 95%;
   }
 

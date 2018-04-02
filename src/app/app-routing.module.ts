@@ -6,6 +6,11 @@ import {UserComponent} from './portal/user/user.component';
 import {AdminComponent} from './portal/admin/admin.component';
 import {VenuesComponent} from './home/venues/venues.component';
 import {EmployeesComponent} from "./portal/admin/employees/employees.component";
+import { RegisterComponent} from "./register/register.component";
+import {PortalComponent} from "./portal/portal.component";
+import {ProfileComponent} from "./profile/profile.component";
+import { AuthGuard} from "./guards/auth.guard";
+
 
 const routes: Routes = [
   {
@@ -39,6 +44,20 @@ const routes: Routes = [
   {
     path: 'employees',
     component: EmployeesComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: 'portal',
+    component: PortalComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+    canActivate:[AuthGuard]
   }
 ];
 

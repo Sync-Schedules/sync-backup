@@ -1,53 +1,13 @@
 <div class="allwrap">
-  <mat-toolbar class="syncbar" color="primary">
-    <span fxLayout="row" fxShow="true" fxHide.lt-md>
-      <a routerLink="home">
-        <img src="../assets/images/sync-small@0.5x.png">
-      </a>
-    </span>
-    <span fxLayout="row" fxShow="false" fxShow.lt-md>
-      <a routerLink="home">
-        <i class="material-icons">menu</i>
-      </a>
-    </span>
-
-    <span class="example-spacer"></span>
-
-    <span fxLayout="row" fxShow="false" fxShow.lt-md>
-      <a routerLink="home">
-        <img src="../assets/images/sync-small@0.5x.png">
-      </a>
-    </span>
-    <div class="nav-menu" fxLayout="row" fxLayoutAlign="space-evenly center" fxShow="true" fxHide.lt-md>
-    <div class="nav-item">
-      <a routerLink="../home/venues/">VENUES</a>
-    </div>
-    <div class="nav-item">
-      <a routerLink="about">ABOUT</a>
-    </div>
-    <div class="nav-item">
-      <a routerLink="contact">CONTACT</a>
-    </div>
-    <a routerLink="login">
-      <div class="loginbutton">
-      LOGIN
-      </div>
-    </a>
-    </div>
-  </mat-toolbar>
+  <app-navbar></app-navbar>
   <router-outlet></router-outlet>
-  <mat-toolbar id="footer">
-    <span fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="30px">
-      <i class="fa fa-copyright"></i>
-      Sync Scheduling, Inc.
+  <mat-toolbar id="footer" fxLayoutGap="20px" fxLayoutAlign="center center">
+    <span fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="10px">
+      <i class="fa fa-copyright" fxShow="true" fxHide.lt-md></i>
+      <span fxShow="true" fxHide.lt-md>Sync Scheduling, Inc.</span>
     </span>
-    <span class="example-spacer"></span>
-    <span fxLayoutGap="10px" class="social">
-      <i class="fa fa-facebook"></i>
-      <i class="fa fa-twitter"></i>
-      <i class="fa fa-github"></i>
-      <i class="fa fa-instagram"></i>
-    </span>
+    <!--<span class="example-spacer" fxShow="true" fxHide.lt-md></span>-->
+    <div class="signup-prompt" fxLayoutAlign="space-around"><a style="color: white;" routerLink="../../register"><b>Need an admin account? Contact Us  </b></a></div>
 
 
   </mat-toolbar>

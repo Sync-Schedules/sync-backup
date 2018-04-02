@@ -6,26 +6,23 @@
 }
 
 .login-card {
+  margin-top: 60px;
   width: 400px;
   border-radius: 5px;
-}
-
-.form-container{
-  height: 60%;
-  width: 85%;
-
-}
-.login {
-  margin-top: 60px;
-  .mat-raised-button {
-    color: white;
-    font-weight: 300;
-    font-size: 12px;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    background-color: #0BA5DB;
-    box-shadow: #eeeeee;
-    border-radius: 4px;
-    width: 85%;
+  form{
+    .mat-form-field{
+      width: 80%;
+    }
+    .mat-raised-button {
+      color: white;
+      font-weight: 300;
+      font-size: 12px;
+      font-family: Roboto, "Helvetica Neue", sans-serif;
+      background-color: #0BA5DB;
+      box-shadow: #eeeeee;
+      border-radius: 4px;
+      width: 85%;
+  }
   }
 }
 

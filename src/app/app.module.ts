@@ -27,8 +27,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatSnackBarModule} from "@angular/material";
 
-
+// Import Components
 
 import {LoginComponent} from './login/login.component';
 import { HomeComponent } from './home/home.component';
@@ -39,7 +40,15 @@ import { VenuesComponent } from './home/venues/venues.component';
 import { AboutUsComponent } from './home/about-us/about-us.component';
 import { LoginBarComponent } from './login/login-bar/login-bar.component';
 import { EmployeesComponent } from './portal/admin/employees/employees.component';
+import { RegisterComponent } from './register/register.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
+// Import Services
+
+import { ValidateService } from "./services/validate.service";
+import { AuthService} from "./services/auth.service";
+import { ProfileComponent } from './profile/profile.component';
+import { AuthGuard} from "./guards/auth.guard";
 
 @NgModule({
   declarations: [
@@ -53,6 +62,9 @@ import { EmployeesComponent } from './portal/admin/employees/employees.component
     AboutUsComponent,
     LoginBarComponent,
     EmployeesComponent,
+    RegisterComponent,
+    NavbarComponent,
+    ProfileComponent,
 
   ],
   imports: [
@@ -82,10 +94,12 @@ import { EmployeesComponent } from './portal/admin/employees/employees.component
     MatButtonModule,
     MatTooltipModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatSnackBarModule,
+    HttpModule
 
   ],
-  providers: [FormBuilder],
+  providers: [FormBuilder, ValidateService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
