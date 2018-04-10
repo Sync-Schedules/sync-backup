@@ -16,13 +16,19 @@ export class RegisterComponent implements OnInit {
   username: String;
   email: String;
   password: String;
-
+  role: String;
   constructor(
     private validateService: ValidateService,
     private authService: AuthService,
     public snackBar: MatSnackBar,
     private router: Router
   ) { }
+
+  roles = [
+    {value: 'Admin', viewValue: 'Admin'},
+    {value: 'Manager', viewValue: 'Manager'},
+    {value: 'DJ', viewValue: 'DJ'}
+  ];
 
   ngOnInit() {
   }
@@ -32,10 +38,14 @@ export class RegisterComponent implements OnInit {
 
     const user = {
       name: this.name,
+      last: this.last,
       email: this.email,
       username: this.username,
-      password: this.password
+      password: this.password,
+      role: this.role
     };
+
+
     //Require fields
 
     if (!this.validateService.validateRegister(user)){
@@ -55,15 +65,15 @@ export class RegisterComponent implements OnInit {
       if(data.success){
         this.snackBar.open('You are now registered and can log in!', '', {duration: 3000});
         this.router.navigate(['/login']);
+        console.log(user);
       } else{
         this.snackBar.open('Something went wrong', 'try again', {duration: 3000});
         this.router.navigate(['/register']);
 
-
       }
     });
 
-    console.log(user);
+    // console.log(user);
 
   }
 

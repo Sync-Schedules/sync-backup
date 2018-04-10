@@ -1,48 +1,34 @@
 <mat-toolbar class="syncbar" color="primary">
-    <span fxLayout="row" fxShow="true" fxHide.lt-md>
+  <span fxLayout="row" fxShow="true" fxHide.lt-md *ngIf="authService.loggedIn()">
       <a routerLink="home">
         <img src="../assets/images/sync-small@0.5x.png">
-      </a>
-    </span>
-  <span fxLayout="row" fxShow="false" fxShow.lt-md>
-      <a routerLink="home">
-        <i class="material-icons">menu</i>
       </a>
     </span>
 
   <span class="example-spacer"></span>
 
-
   <div class="nav-menu" fxLayout="row" fxLayoutAlign="space-evenly center" fxShow="true" fxHide.lt-md>
-    <!--<div class="nav-item">-->
-      <!--<a routerLink="../home/venues/">VENUES</a>-->
-    <!--</div>-->
-    <!--<div class="nav-item">-->
-      <!--<a routerLink="about">ABOUT</a>-->
-    <!--</div>-->
-    <!--<div class="nav-item">-->
-      <!--<a routerLink="contact">CONTACT</a>-->
-    <!--</div>-->
-    <div class="nav-item" *ngIf="authService.loggedIn()">
-      <a routerLink="../portal">Dashboard</a>
-    </div>
-    <div class="nav-item" *ngIf="authService.loggedIn()">
-      <a routerLink="../profile">profile</a>
-    </div>
-    <a routerLink="../../../register">
-      <div class="loginbutton" *ngIf="!authService.loggedIn()">
-        Sign Up
-      </div>
-    </a>
-    <a href="" (click)="onLogoutClick()">
-      <div class="loginbutton" *ngIf="authService.loggedIn()">
-        Logout
-      </div>
-    </a>
-    <a routerLink="login">
-      <div class="loginbutton" *ngIf="!authService.loggedIn()">
-        Login
-      </div>
-    </a>
+    <button mat-icon-button class="menu"[matMenuTriggerFor]="menu"  *ngIf="authService.loggedIn()">
+      <mat-icon>account_circle</mat-icon>
+    </button>
   </div>
 </mat-toolbar>
+
+
+<mat-menu #menu="matMenu">
+  <!--<span mat-menu-item>-->
+    <!--{{user.username}}-->
+  <!--</span>-->
+  <button mat-menu-item routerLink="../portal">
+    <mat-icon>home</mat-icon>
+    <span>home</span>
+  </button>
+  <button mat-menu-item routerLink="../profile">
+    <mat-icon>person</mat-icon>
+    <span>profile</span>
+  </button>
+  <button mat-menu-item (click)="onLogoutClick()">
+    <mat-icon>exit_to_app</mat-icon>
+    <span>logout</span>
+  </button>
+</mat-menu>

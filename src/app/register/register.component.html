@@ -24,8 +24,17 @@
         <input matInput type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Password" required="required">
       </mat-form-field>
 
+      <mat-form-field class="example-full-width">
+        <mat-select placeholder="Select a role" [(ngModel)]="role" name="role">
+          <mat-option *ngFor="let role of roles" [value]="role.value">
+            {{role.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
       <div fxLayoutAlign="center center">
-        <button mat-raised-button type="submit" (click)="openSnackBar(message.value)">Submit</button>
+        <button mat-raised-button type="submit">Submit</button>
       </div>
 
     </form>

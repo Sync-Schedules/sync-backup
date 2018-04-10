@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~angular-calendar/css/angular-calendar.css";
 
 
 html,
@@ -31,7 +32,7 @@ body{
 }
 
 .mat-card{
-  height: 500px;
+  height: auto;
   width: 1000px;
   background: white;
   border-radius: 5px;

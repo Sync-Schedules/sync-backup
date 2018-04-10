@@ -16,7 +16,6 @@ a {
 }
 
 .allwrap{
-  height: 100vh;
   .example-spacer {
     flex: 1 1 auto;
   }
@@ -67,7 +66,7 @@ a {
 
 
 .material-icons{
-  color: #0BA5DB;
+  color: white;
   font-family: 'Material Icons',sans-serif;
   font-weight: 100;
   font-style: normal;
@@ -79,4 +78,48 @@ a {
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
+}
+
+
+.app-sidenav {
+  cursor: pointer;
+  background-color: #0BA5DB;
+  color: white;
+  width: 7%;
+}
+
+.mat-drawer-container {
+  background-color: white;
+}
+.all-wrap{
+}
+.page-wrap{
+  display: flex;
+  flex-direction: column;
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  > *:not(router-outlet) {
+    flex: 1;
+    display: block;
+  }
+}
+.mat-sidenav-container {
+  .mat-toolbar {
+    background-color: white;
+    height: 80px;
+    display: flex;
+    button + button {
+      margin-left: 25px;
+    }
+  }
+  a {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #333333;
+  }
 }

@@ -15,7 +15,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {
   MatDialogModule, MatSidenavModule, MatListModule, MatToolbarModule, MatIconModule,
-  MatNativeDateModule
+  MatNativeDateModule, MatTabsModule, MatPaginatorModule, MatSortModule
 } from '@angular/material';
 import {MatCardModule} from '@angular/material/card';
 import {MatStepperModule} from '@angular/material/stepper';
@@ -28,9 +28,11 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatSnackBarModule} from "@angular/material";
-
+import { CalendarModule} from "angular-calendar";
+import { DemoModule} from "./shared/calendar/calendar.module";
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatTableModule} from "@angular/material";
 // Import Components
-
 import {LoginComponent} from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { PortalComponent } from './portal/portal.component';
@@ -42,13 +44,14 @@ import { LoginBarComponent } from './login/login-bar/login-bar.component';
 import { EmployeesComponent } from './portal/admin/employees/employees.component';
 import { RegisterComponent } from './register/register.component';
 import { NavbarComponent } from './navbar/navbar.component';
-
+import { ProfileComponent } from './profile/profile.component';
 // Import Services
-
 import { ValidateService } from "./services/validate.service";
 import { AuthService} from "./services/auth.service";
-import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard} from "./guards/auth.guard";
+import { CalendarComponent } from './shared/calendar/calendar.component';
+import { ManagerComponent } from './portal/manager/manager.component';
+
 
 @NgModule({
   declarations: [
@@ -65,6 +68,7 @@ import { AuthGuard} from "./guards/auth.guard";
     RegisterComponent,
     NavbarComponent,
     ProfileComponent,
+    ManagerComponent,
 
   ],
   imports: [
@@ -92,12 +96,17 @@ import { AuthGuard} from "./guards/auth.guard";
     MatSelectModule,
     MatGridListModule,
     MatButtonModule,
+    MatButtonToggleModule,
     MatTooltipModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatSnackBarModule,
-    HttpModule
-
+    HttpModule,
+    DemoModule,
+    MatTabsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [FormBuilder, ValidateService, AuthService, AuthGuard],
   bootstrap: [AppComponent]

@@ -52,17 +52,22 @@ const routes: Routes = [
   {
     path: 'portal',
     component: PortalComponent,
-    canActivate: [AuthGuard]
+    // canActivate: [AuthGuard]
   },
   {
     path: 'profile',
     component: ProfileComponent,
-    canActivate:[AuthGuard]
+    // canActivate:[AuthGuard]
   },
   {
     path: 'admin',
     component: AdminComponent,
-    canActivate:[AuthGuard]
+    // canActivate:[AuthGuard]
+  },
+  {
+    path: 'manager',
+    component: AdminComponent,
+    // canActivate:[AuthGuard]
   }
 ];
 
