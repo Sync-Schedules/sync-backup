@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
 
   username: String;
   password: String;
+  role: String;
 
   constructor(
     public validateService: ValidateService,
@@ -28,7 +29,8 @@ export class LoginComponent implements OnInit {
   onLoginSubmit(){
     const user = {
       username: this.username,
-      password: this.password
+      password: this.password,
+      role: this.role
     };
     this.authService.authenticateUser(user).subscribe(data =>{
       if(data.success){

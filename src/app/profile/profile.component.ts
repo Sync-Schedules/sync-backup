@@ -9,10 +9,18 @@ import { Router } from "@angular/router";
 })
 export class ProfileComponent implements OnInit {
   user: Object;
+  _id: String;
+  role: String;
+  email: String;
+  show: boolean = false;
+  users: Object[];
+  errorMessage: any;
+
 
   constructor(
     private as: AuthService,
-    private r: Router
+    private r: Router,
+
   ) { }
 
   ngOnInit() {
@@ -24,5 +32,7 @@ export class ProfileComponent implements OnInit {
       return false;
       });
   }
+
+
 
 }
