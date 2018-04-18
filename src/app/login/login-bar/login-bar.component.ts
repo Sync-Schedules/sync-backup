@@ -13,6 +13,7 @@ import {AuthService} from "../../services/auth.service";
 export class LoginBarComponent implements OnInit {
 
   username: String;
+  email: String;
   password: String;
   role: String;
 

@@ -71,8 +71,6 @@ export class AddVenueComponent implements OnInit {
         console.log(venue);
       } else{
         this.snackBar.open('Something went wrong', 'try again', {duration: 3000});
-        this.router.navigate(['/admin']);
-
       }
     });
 

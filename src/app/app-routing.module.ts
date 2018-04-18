@@ -39,9 +39,9 @@ const routes: Routes = [
     path: 'portal',
     component: PortalComponent,
     children:[
-      {path: 'admin', component: AdminComponent, canActivate: [AdminGuard]},
-      {path: 'manager', component: ManagerComponent},
-      {path: 'user', component: UserComponent}
+      {path: 'portal/admin', component: AdminComponent, canActivate: [AdminGuard]},
+      {path: 'portal/manager', component: ManagerComponent},
+      {path: 'portal/user', component: UserComponent}
     ]
     // canActivate: [AuthGuard]
   },

@@ -63,9 +63,9 @@ export class VenueDataComponent implements OnInit {
     this.as.deleteVenue(_id)
       .subscribe(data => {
         if (data.success){
-          this.snackBar.open('User has been deleted', '', {duration: 3000});
-          console.log(_id);
           this.ngOnInit();
+          this.snackBar.open('User has been deleted', '', {duration: 3000});
+
         } else {
           this.snackBar.open('Error', 'Close', {duration: 2000})
         }

@@ -7,6 +7,7 @@ import {AddUserComponent} from "../../../dialogs/add-user/add-user.component";
 import {ConfirmDialogComponent} from "../../../dialogs/delete-dialog/confirm-dialog.component";
 import {AuthService} from "../../../services/auth.service";
 import {Router} from "@angular/router";
+import {EditUserComponent} from "../../../dialogs/edit-user/edit-user.component";
 
 @Component({
   selector: 'usertable',
@@ -66,8 +67,8 @@ export class EmployeesComponent implements OnInit {
     this.as.deleteUser(_id)
       .subscribe(data => {
         if (data.success) {
-          this.snackBar.open('User has been deleted', '', {duration: 3000});
           this.ngOnInit();
+          this.snackBar.open('User has been deleted', '', {duration: 3000});
         } else{
           this.snackBar.open('ERROR', '',{duration:2000} )
         }
@@ -76,14 +77,16 @@ export class EmployeesComponent implements OnInit {
   }
 
   updateUser(_id){
-    this.as.updateUser(_id)
-      .subscribe(data => {
-        console.log(data);
-        if(data.success){
-          this.snackBar.open('User Updated', '', {duration: 3000});
-          console.log(_id)
-        }
-      });
+    // this.as.updateUser(_id)
+    //   .subscribe(data => {
+    //     console.log(data);
+    //     if(data.success){
+    //       this.snackBar.open('User Updated', '', {duration: 3000});
+    //       console.log(_id)
+    //     }
+    //   });
+    console.log(_id);
+    this.dialog.open(EditUserComponent, {width: '500px'});
     this.ngOnInit();
   }
 

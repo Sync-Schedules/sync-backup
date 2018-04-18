@@ -60,6 +60,7 @@ import { SyncCalendarComponent } from './shared/sync-calendar/sync-calendar.comp
 import { DayComponent } from './shared/sync-calendar/day/day.component';
 import { WeekComponent } from './shared/sync-calendar/week/week.component';
 import { MonthComponent } from './shared/sync-calendar/month/month.component';
+import { EditUserComponent } from './dialogs/edit-user/edit-user.component';
 
 
 @NgModule({
@@ -84,6 +85,7 @@ import { MonthComponent } from './shared/sync-calendar/month/month.component';
     DayComponent,
     WeekComponent,
     MonthComponent,
+    EditUserComponent,
 
   ],
   imports: [
@@ -124,14 +126,21 @@ import { MonthComponent } from './shared/sync-calendar/month/month.component';
     MatSortModule,
     MatRadioModule
   ],
-  providers: [FormBuilder,
+  providers: [
+    FormBuilder,
     ValidateService,
     AuthService,
     AuthGuard,
     AdminGuard,
     UserService,
-    JwtHelper],
+    JwtHelper
+  ],
   bootstrap: [AppComponent],
-  entryComponents: [AddVenueComponent, AddUserComponent, ConfirmDialogComponent]
+  entryComponents: [
+    AddVenueComponent,
+    AddUserComponent,
+    ConfirmDialogComponent,
+    EditUserComponent
+  ]
 })
 export class AppModule { }
