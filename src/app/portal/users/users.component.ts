@@ -1,25 +1,31 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import { UserService} from "../../../services/user.service";
 import 'rxjs/add/observable/of';
-import { User} from "../../../models/user.model";
 import {MatDialog, MatPaginator, MatSnackBar, MatSort, MatTableDataSource} from "@angular/material";
-import {AddUserComponent} from "../../../dialogs/add-user/add-user.component";
-import {ConfirmDialogComponent} from "../../../dialogs/delete-dialog/confirm-dialog.component";
-import {AuthService} from "../../../services/auth.service";
+import {AddUserComponent} from "../../dialogs/add-user/add-user.component";
+import { ConfirmDialogComponent} from "../../dialogs/delete-dialog/confirm-dialog.component";
 import {Router} from "@angular/router";
-import {EditUserComponent} from "../../../dialogs/edit-user/edit-user.component";
+import {EditUserComponent} from "../../dialogs/edit-user/edit-user.component";
+import {UserService} from "../../services/user.service";
+import {User} from "../../models/user.model";
+import {AuthService} from "../../services/auth.service";
 
 @Component({
   selector: 'usertable',
   providers: [UserService],
-  templateUrl: './employees.component.html',
-  styleUrls: ['./employees.component.scss']
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.scss']
 })
 export class EmployeesComponent implements OnInit {
 
   displayedColumns = ['name', 'last', 'username', 'email', 'role', 'actions'];
   dataSource = new MatTableDataSource<User>();
+  id: string;
   user:any;
+  name: string;
+  last: string;
+  username: string;
+  email: string;
+  role: string;
 
 
   constructor(
@@ -76,18 +82,46 @@ export class EmployeesComponent implements OnInit {
     // this.router.navigate(['./admin']);
   }
 
-  updateUser(_id){
-    // this.as.updateUser(_id)
-    //   .subscribe(data => {
-    //     console.log(data);
-    //     if(data.success){
-    //       this.snackBar.open('User Updated', '', {duration: 3000});
-    //       console.log(_id)
-    //     }
-    //   });
-    console.log(_id);
-    this.dialog.open(EditUserComponent, {width: '500px'});
-    this.ngOnInit();
+  updateUser(user){
+
+    console.log(user, user._id, user.name, user.last);
+    let dialogRef = this.dialog.open(EditUserComponent, {
+      width: '500px',
+      data: {
+        id: user._id,
+        name: user.name,
+        last: user.last,
+        username: user.username,
+        email: user.email,
+        role: user.role
+
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.user = {
+        name: result.name,
+        last: result.last,
+        email: result.email,
+        username: result.username,
+        role: result.role
+      } ;
+      this.id = result.id;
+
+      console.log('new user: ' + this.user + ',' + this.id + ',' +this.name + ',' + this.last + ',' + this.username + ',' + this.email + ',' + this.role);
+      this.as.updateUser(result.id, this.user)
+        .subscribe(data => {
+          if (data.success){
+            this.snackBar.open('user has been updated!' , 'Cool', {duration: 2000});
+            this.dialog.closeAll();
+            this.ngOnInit();
+          }
+          else{
+            this.snackBar.open('something went wrong');
+          }
+        })
+
+    });
   }
 
 }

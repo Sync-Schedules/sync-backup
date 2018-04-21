@@ -14,9 +14,9 @@
 
 
 <mat-menu #menu="matMenu">
-  <!--<span mat-menu-item>-->
-    <!--{{user.username}}-->
-  <!--</span>-->
+  <span mat-menu-item>
+    {{user?.name}}
+  </span>
   <button mat-menu-item routerLink="../portal">
     <mat-icon>home</mat-icon>
     <span>home</span>

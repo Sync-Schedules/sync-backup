@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../../services/auth.service";
 import {UserService} from "../../services/user.service";
 import {User} from "../../models/user.model";
-import {EmployeesComponent} from "../../portal/admin/employees/employees.component";
+import {EmployeesComponent} from "../../portal/users/users.component";
 
 @Component({
   selector: 'app-confirm-dialog',

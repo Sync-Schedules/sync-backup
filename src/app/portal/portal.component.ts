@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from "../services/auth.service";
 
 @Component({
   selector: 'app-portal',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortalComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
-
 }

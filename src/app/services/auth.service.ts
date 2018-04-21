@@ -13,6 +13,8 @@ export class AuthService {
 
   constructor(private http: Http, public jwtHelper: JwtHelper) { }
 
+  //CREATE
+
   registerUser(user){
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
@@ -20,29 +22,15 @@ export class AuthService {
       .map(res => res.json());
   }
 
-  deleteUser(id){
-    return this.http.delete('http://localhost:3000/users/user/'+id)
-    .map(res => res.json());
-}
 
-  updateUser(id){
+  addVenue(venue){
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/users/update/'+id,{headers:headers})
-      .map(res => res.json());
-}
-
-  deleteVenue(id){
-    return this.http.delete('http://localhost:3000/venues/venue/'+id)
+    return this.http.post('http://localhost:3000/venues/addVenue', venue, {headers: headers})
       .map(res => res.json());
   }
 
-  authenticateUser(user){
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/users/authenticate', user, {headers: headers})
-      .map(res => res.json());
-  }
+  //READ
 
   getProfile(){
     let headers = new Headers();
@@ -58,6 +46,47 @@ export class AuthService {
       .map(res => res.json());
   }
 
+  //UPDATE
+
+  updateUser(id, body){
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.put('http://localhost:3000/users/update/'+id,body,{headers:headers})
+      .map(res => res.json());
+}
+  updateVenue(id, body){
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.put('http://localhost:3000/venues/update/'+id,body,{headers:headers})
+      .map(res => res.json());
+  }
+
+  //DELETE
+
+  deleteVenue(id){
+    return this.http.delete('http://localhost:3000/venues/venue/'+id)
+      .map(res => res.json());
+  }
+
+  deleteUser(id){
+    return this.http.delete('http://localhost:3000/users/user/'+id)
+      .map(res => res.json());
+  }
+
+  //AUTH
+
+  authenticateUser(user){
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post('http://localhost:3000/users/authenticate', user, {headers: headers})
+      .map(res => res.json());
+  }
+
+
+  isAuthenticated(): boolean {
+    const token = localStorage.getItem('id_token');
+    return !this.jwtHelper.isTokenExpired(token);
+  }
 
   storeUserData(token, user){
     localStorage.setItem('id_token', token);
@@ -79,17 +108,5 @@ export class AuthService {
     this.authToken = null;
     this.user = null;
     localStorage.clear();
-  }
-
-  addVenue(venue){
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/venues/addVenue', venue, {headers: headers})
-      .map(res => res.json());
-  }
-
-  isAuthenticated(): boolean {
-    const token = localStorage.getItem('id_token');
-    return !this.jwtHelper.isTokenExpired(token);
   }
 }

@@ -1,17 +1,10 @@
 @import "../../styles.scss";
 
-.profile-card{
+.profile-content{
   width: 85%;
+  height: 100%
 }
 
-.day{
-  font-family: Righteous, sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  color: #0BA5DB;
-}
-
-.avail{
-  font-size: 20px;
-  font-weight: 300;
+.profile-card, .profile-options{
+  width: 500px;
 }

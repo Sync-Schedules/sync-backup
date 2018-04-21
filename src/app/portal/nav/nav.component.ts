@@ -1,25 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialog, MatDialogRef, MatDialogModule} from "@angular/material";
 import {AuthService} from "../../services/auth.service";
 
 @Component({
-  selector: 'app-admin',
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.scss']
+  selector: 'app-nav',
+  templateUrl: './nav.component.html',
+  styleUrls: ['./nav.component.scss']
 })
-export class AdminComponent implements OnInit {
- user: any;
+export class NavComponent implements OnInit {
+  user: any;
+  role: "Admin";
   constructor(private as: AuthService) {
   }
 
   ngOnInit() {
     this.as.getProfile().subscribe(profile => {
         this.user = profile.user;
-      },
-      err =>{
+        this.role = profile.role;
+        },
+      err => {
         console.log(err);
         return false;
       });
   }
-
 }

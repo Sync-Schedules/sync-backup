@@ -59,8 +59,8 @@
       <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
       <mat-cell *matCellDef="let venue">
         <div fxLayout="row">
-          <button mat-button><mat-icon>mode_edit</mat-icon></button>
-          <button mat-raised-button button color="warn"(click)="DeleteVenue(venue._id)"><mat-icon>delete</mat-icon></button>
+          <button mat-button (click)="updateVenue(venue)"><mat-icon>mode_edit</mat-icon></button>
+          <button mat-raised-button color="warn"(click)="DeleteVenue(venue._id)"><mat-icon>delete</mat-icon></button>
         </div>
       </mat-cell>
     </ng-container>

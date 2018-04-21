@@ -28,26 +28,22 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatSnackBarModule} from "@angular/material";
+import {MatSlideToggleModule} from '@angular/material/slide-toggle'
 import { CalendarModule} from "angular-calendar";
 import { DemoModule} from "./shared/calendar/calendar.module";
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatTableModule} from "@angular/material";
-// Import Components
 import {LoginComponent} from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { PortalComponent } from './portal/portal.component';
-import { UserComponent } from './portal/user/user.component';
-import { AdminComponent } from './portal/admin/admin.component';
 import { LoginBarComponent } from './login/login-bar/login-bar.component';
-import { EmployeesComponent } from './portal/admin/employees/employees.component';
+import { EmployeesComponent } from './portal/users/users.component';
 import { RegisterComponent } from './register/register.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CalendarComponent } from './shared/calendar/calendar.component';
-import { ManagerComponent } from './portal/manager/manager.component';
-import { VenueDataComponent } from './portal/admin/venue-data/venue-data.component';
+import { VenueDataComponent } from './portal/venue-data/venue-data.component';
 import { AddVenueComponent } from './dialogs/add-venue/add-venue.component';
-// Import Services
 import { ValidateService } from "./services/validate.service";
 import { AuthService} from "./services/auth.service";
 import { AuthGuard} from "./guards/auth.guard";
@@ -57,10 +53,11 @@ import {JwtHelper} from "angular2-jwt";
 import { ConfirmDialogComponent } from './dialogs/delete-dialog/confirm-dialog.component';
 import {AdminGuard} from "./guards/admin.guard";
 import { SyncCalendarComponent } from './shared/sync-calendar/sync-calendar.component';
-import { DayComponent } from './shared/sync-calendar/day/day.component';
-import { WeekComponent } from './shared/sync-calendar/week/week.component';
-import { MonthComponent } from './shared/sync-calendar/month/month.component';
 import { EditUserComponent } from './dialogs/edit-user/edit-user.component';
+import { NavComponent } from './portal/nav/nav.component';
+import { ScheduleComponent } from './portal/schedule/schedule.component';
+import { AvailabiltyComponent } from './portal/availabilty/availabilty.component';
+import { EditVenueComponent } from './dialogs/edit-venue/edit-venue.component';
 
 
 @NgModule({
@@ -69,23 +66,21 @@ import { EditUserComponent } from './dialogs/edit-user/edit-user.component';
     LoginComponent,
     HomeComponent,
     PortalComponent,
-    UserComponent,
-    AdminComponent,
     LoginBarComponent,
     EmployeesComponent,
     RegisterComponent,
     NavbarComponent,
     ProfileComponent,
-    ManagerComponent,
     VenueDataComponent,
     AddVenueComponent,
     AddUserComponent,
     ConfirmDialogComponent,
     SyncCalendarComponent,
-    DayComponent,
-    WeekComponent,
-    MonthComponent,
     EditUserComponent,
+    NavComponent,
+    ScheduleComponent,
+    AvailabiltyComponent,
+    EditVenueComponent,
 
   ],
   imports: [
@@ -124,7 +119,8 @@ import { EditUserComponent } from './dialogs/edit-user/edit-user.component';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSlideToggleModule
   ],
   providers: [
     FormBuilder,
@@ -140,7 +136,8 @@ import { EditUserComponent } from './dialogs/edit-user/edit-user.component';
     AddVenueComponent,
     AddUserComponent,
     ConfirmDialogComponent,
-    EditUserComponent
+    EditUserComponent,
+    EditVenueComponent
   ]
 })
 export class AppModule { }
